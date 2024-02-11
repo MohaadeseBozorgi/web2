@@ -1,0 +1,183 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ==========================================header=========================== */
+.nav1 {
+    position: sticky;
+    background-color: black;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between; 
+}
+.nav1 div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.header1 {
+    font-size: 5rem;
+    color: pink;
+    text-align: center;
+    text-shadow: 5px 2px #e6ed11;
+    width: auto;
+    padding: 50px;
+    margin: 50px;
+    font-style: oblique;
+    transition-property: all;
+    transition-duration: 2s; 
+}
+.nav1 div a {
+    background-color: pink;
+    width: max-content;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: 2px solid yellow;
+    padding: 50px;
+    text-decoration: none;
+    color: black;
+    /* margin-right: 50px; */
+    transition-property: all;
+    transition-duration: 2s;  
+}
+div>a:hover{
+    background-color: yellow;
+    font-size: 3rem;
+    font-style: italic;
+}
+.header1:hover{
+    font-size: 6rem;
+}
+/* ===============================aside======================= */
+.parent {
+    /* width: 100%; */
+    /* height: 700px; */
+    display: flex;
+    justify-content: space-around;
+    /* align-items: stretch; */
+
+}
+.side{
+    width: 20vw;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    
+}
+.imdb{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+
+}
+.imdb img {
+    margin: 50px auto;
+    /* margin-left: 80px; */
+    width: 200px;
+    height: 280px;
+}
+
+.imdb p {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 50px;
+    color: burlywood;
+}
+
+.imdb a {
+    text-decoration: none;
+    text-align: center;
+    color: coral;
+    font-size: 2rem;
+}
+
+/* ==========================================main=================== */
+
+.main{
+    width: 50vw;
+    background-color: black;
+}
+.main h3 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 5pc;
+    background-color: black;
+    color: pink;
+}
+.main p {
+    color: wheat;
+    margin: 20px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 2rem;
+}
+.main img {
+    width: 100%;
+    margin-top: 20px;
+}
+   
+/* =========================================footer============================= */
+.sec4 {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.sec4 div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-items: baseline;   
+}
+.sec4 div a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 20px;
+}
+.sec4 div a {
+    text-decoration: none;
+    background-color: black;
+} 
+.sec4 div p {
+    color: wheat;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 80px 50px 0 0;
+}
+
+/* ================================media========================= */
+
+@media (max-width: 576px) {
+    .header1{ font-size: 3rem; transition: disabled;}
+    .header1 {transition: none; font-size: 3rem;}
+    .nav1 div a {transition: none; padding: 1rem;}
+     header .nav1 div {justify-content: center; flex-wrap: nowrap; width: 20px;}
+    .sec4 div p {font-size: 0.5rem;}
+    /* .sec4{width: 900px;} */
+    .parent {flex-direction: column !important;}
+    .side {width: 100%; order:2 }
+    .main {width:100%; order:1}
+}
+@media (min-width: 577px) and (max-width: 992px) {
+    .header1 {transition: none; font-size: 3rem;}
+    .nav1 div a {transition: none; padding: 1rem;}
+    header .nav1 div {justify-content: center; flex-wrap: nowrap; width: 20px;}
+    .sec4 div p {font-size: 1rem;}
+    .parent {flex-direction: column !important;}
+    .side {width: 100%; order:2 }
+    .main {width:100%; order:1}
+}
